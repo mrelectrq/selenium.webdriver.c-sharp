@@ -47,7 +47,7 @@ namespace EliteShoppyFunctionalityTests
 
             var sendButton = driver.FindElement(_InputSendButton);
             sendButton.Click();
-
+            
         }
 
         [TearDown]
