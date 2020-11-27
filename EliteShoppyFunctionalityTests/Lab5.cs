@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace EliteShoppyFunctionalityTests
 {
@@ -31,6 +32,11 @@ namespace EliteShoppyFunctionalityTests
 
             var search_btn = driver.FindElement(_searchButton);
             search_btn.Click();
+
+            Thread.Sleep(1000);
+
+            Assert.IsTrue(driver.FindElement(By.XPath("//div[@id='simpalsid']")).Displayed);
+            
         }
     }
 }
